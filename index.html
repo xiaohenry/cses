@@ -1,0 +1,117 @@
+---
+layout: default
+---
+<div id="main" role="main">
+    <header>
+        <div class="wrapper">
+            <h2>UC San Diego</h2>
+            <h1>Computer Science &amp; Engineering Society</h1>
+            <h4>Connecting UC San Diego's CSE community</h4>
+            <a class="header-btn facebook-btn" href="https://www.facebook.com/groups/ucsdcses/" target="_blank">Facebook Group</a>
+            <a class="header-btn subscribe-btn">Subscribe</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-container container">
+            <h1>Our Goal</h1>
+            <p>At CSES, we aim to form a passionate community of computer scientists and engineers at UC San Diego. From tech talks, to social events, to outreach, we have a diverse set of events and activities that appeal to any computer scientist or engineer.</p>
+            <img src="/images/macbook.jpg" alt="Macbook Icon" />
+        </div>
+    </section>
+
+
+    <!-- EVENTS-->
+    <section id="events">
+        <div class="section-container container">
+            <h1>Events</h1>
+            {% assign sortedEvents = (site.events | sort: 'date-begin') %}
+            {% for event in sortedEvents %}
+            {% assign curDate = (site.time | date: '%s') %}
+            {% assign eventDateBegin = (event.date-begin | date: '%s') %}
+            {% assign eventDateEnd = (event.date-end | date: '%s') %}
+            {% if eventDateEnd >= curDate + 86400 %}
+
+            <!-- keep track of events that are AT MOST 1 day old -->
+            {% include event.html %}
+
+            {% endif %}
+            {% endfor %}
+            <a href="/archives" class="events-archive-btn">View Archives</a>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+        <div class="section-container container">
+            <h1>Team</h1>
+            <ul>
+                {% for officer in site.officers %}
+                <li>
+                    <div class="team-img-container">
+                        {% if officer.linkedin %}
+                        <div class="team-overlay">
+                            <a href="{{officer.linkedin}}" target="_blank">Let's Connect! <span class="linkedin-btn">LinkedIn</span></a>
+                        </div>
+                        {% endif %}
+                        <img src="{{officer.img}}" alt="CSES Team Member"/>
+                        {% if officer.linkedin %}
+                        <a href="{{officer.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        {% endif %}
+                    </div>
+                    <h5 class="team-name">{{officer.name}}</h5>
+                    <p class="team-position">{{officer.position}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-container container">
+            <h1>Contact</h1>
+
+            <div class="contact-msg">
+                <p>Leave us a message and we'll get back to you as soon as possible.</p>
+                <p>Don't forget to also <span class='subscribe-btn'>subscribe</span> to our newsletter and join our <a href="https://www.facebook.com/groups/ucsdcses/" target="_blank">Facebook group</a> to stay up-to-date with our latest events!</p>
+            </div>
+
+            <!-- TODO: append cses email to action -->
+            <form action="http://formspree.io/" method="POST" id='contact-form'>
+
+                <div class='contact-name contact-field'>
+                    <label class='contact-label'>Name *</label>
+                    <input type='text' required name='name' />
+                </div>
+
+                <div class='contact-email contact-field'>
+                    <label class='contact-label'>Email *</label>
+                    <input type='email' required name="_replyto" />
+                </div>
+
+                <div class='contact-content contact-field'>
+                    <label class='contact-label'>Message *</label>
+                    <textarea class='contact-content' required name="body"></textarea>
+                </div>
+                <div class='contact-submit contact-field'>
+                    <button class="contact-submit-btn"><i class="fa fa-paper-plane"></i></button>
+                </div>
+
+                <input type="hidden" name="_subject" value="CSES: New Message" />
+                <input type="hidden" name="_next" value="#">
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsors">
+        <div class="section-container container">
+            <h1>Sponsors</h1>
+
+        </div>
+    </section>
+</div>

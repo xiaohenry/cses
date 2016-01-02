@@ -1,0 +1,18 @@
+---
+layout: static
+---
+
+<section id="archives">
+    <div class="section-container container">
+        <h1>Archives</h1>
+        <p>You are viewing the events archives for CSES. Most recent/future events are at the top. To stay up-to-date with our upcoming events, join our <a href="https://www.facebook.com/groups/ucsdcses/" target="_blank">Facebook group</a> and <span class="subscribe-btn">subscribe</span> to our newsletter!</p>
+        {% assign sortedEvents = (site.events | sort: 'date-begin') %}
+        {% for event in sortedEvents reversed %}
+        {% assign curDate = (site.time | date: '%s') %}
+        {% assign eventDateBegin = (event.date-begin | date: '%s') %}
+        {% assign eventDateEnd = (event.date-end | date: '%s') %}
+        {% include event.html %}
+        {% endfor %}
+    </div>
+
+</section>

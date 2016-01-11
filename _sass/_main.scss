@@ -2,79 +2,108 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
-$open-sans: 'open sans', sans-serif;
-
-$blue: rgb(2, 88, 120);
-$yellow: rgb(237, 171, 24);
-$dark-gray: rgb(65, 65, 65);
-$light-gray: #f5f5f9;
-
-$container-width: 800px;
-
-$box-shadow: 3px 3px 5px rgba(60,60,60,0.4);
-
-$ease: 0.2s all ease;
-
-/** GT - Progressive. Enh**/
-$gt-320: 'only screen and (min-width: 20em)';
-$gt-360: 'only screen and (min-width: 22.5em)';
-$gt-480: 'only screen and (min-width: 30em)';
-$gt-640: 'only screen and (min-width: 40em)';
-$gt-768: 'only screen and (min-width: 48em)';
-$gt-900: 'only screen and (min-width: 56.25em)';
-$gt-940: 'only screen and (min-width: 58.75em)';
-$gt-1000: 'only screen and (min-width: 62.5em)';
-$gt-1200: 'only screen and (min-width: 75em)';
-$gt-1250: 'only screen and (min-width: 78.125em)';
-/** LT - Graceful Deg. **/
-$lt-320: 'only screen and (max-width: 19.9375em)';
-$lt-360: 'only screen and (max-width: 22.4375em)';
-$lt-480: 'only screen and (max-width: 29.9375em)';
-$lt-640: 'only screen and (max-width: 39.9375em)';
-$lt-768: 'only screen and (max-width: 47.9375em)';
-$lt-900: 'only screen and (max-width: 56.1875em)';
-$lt-940: 'only screen and (max-width: 58.6875em)';
-$lt-1000: 'only screen and (max-width: 62.4375em)';
-$lt-1200: 'only screen and (max-width: 74.9375em)';;
-
 @mixin event {
     .event {
-        box-shadow: $box-shadow;
-        border: 1px solid darken($light-gray,10%);
-        background-color: #fff;
         margin: 20px 0;
         padding: 20px 25px;
+        // border: 1px solid darken($light-gray,10%);
+        border: 1px solid darken($light-gray,15%);
+        background-color: #fff;
+        // box-shadow: $box-shadow;
         transition: $ease;
         @media #{$lt-480} {
             padding: 20px 15px;
         }
         i {
-            font-size: 14px;
-            color: $blue;
-            width: 14px;
             margin-right: 4px;
-            text-align: center;
-        }
-        h3.event-name {
+            width: 14px;
             color: $blue;
+            text-align: center;
+            font-size: 16px;
+        }
+        .event-img-container {
+            overflow: hidden;
+            margin-bottom: 10px;
+            // max-height: 150px;
+            width: 100%;
+            // height: 100%;
+            height: 150px;
+            border: 1px solid rgba(61, 61, 61, 1);
+            transition: $ease;
+            @media #{$lt-480} {
+                // height: 150px;
+            }
+        }
+        // .event-img {
+        //     background-image: url(/images/event-placeholder.jpg);
+        //     // opacity: 1;
+        //     background-size: cover;
+        //     width: 100%;
+        //     height: 150px;
+        //     transition: 0.5s all ease;
+        //     &:hover {
+        //         transform: scale(1.03);
+        //     }
+        //     h4 {
+        //
+        //     }
+        // }
+        .event-img-overlay {
+            width: 100%;
+            // height: 150px;
+            height: 100%;
+            // min-height: 50px;
+            // padding-bottom: 32%;
+            // overflow: hidden;
+            // position: relative;
+            // margin: 0;
+
+
+            // background-image: url(/images/event-placeholder.jpg);
+            background-size: cover;
+            // padding: 8px 1%;
+            // position: absolute;
+            // background-color: rgba(0,0,0,0.6);
+            // z-index: 100;
+            // overflow: hidden;
+            transition: 0.5s all ease;
+            &:hover {
+                transform: scale(1.02);
+
+                // h4 {
+                    // background-color: rgba(0,0,0,0.9);
+                    // transform: none;
+                    // transform: scale(0.98);
+                // }
+            }
+            h4 {
+                padding: 6px 2%;
+                background-color: rgba(0,0,0,0.8);
+                color: $light-gray;
+                font-weight: 600;
+                // text-shadow: 1px 1px 0px $blue;
+            }
+        }
+        h4.event-name {
             margin-bottom: 8px;
+            color: $blue;
             font-weight: 600;
         }
-        p.event-date, p.event-time {
+        p.event-date, p.event-time, p.event-location {
+            // color: lighten($dark-gray,10%);
             font-size: 15px;
-            color: lighten($dark-gray,10%);
         }
-        p.event-location {
-            font-size: 15px;
-            color: lighten($dark-gray,10%);
-        }
+        // p.event-location {
+            // color: lighten($dark-gray,10%);
+            // font-size: 15px;
+        // }
         p.event-info {
             margin-top: 15px;
             color: $dark-gray;
             transition: $ease;
             a {
-                font-weight: 400;
                 color: $blue;
+                font-weight: 400;
                 &:hover {
                     color: lighten($blue, 5%);
                 }
@@ -83,19 +112,20 @@ $lt-1200: 'only screen and (max-width: 74.9375em)';;
         a.event-link-btn {
             display: inline-block;
             margin: 15px 5px 0 0;
-            background-color: rgba($blue, 0.8);
-            color: #fff;
             padding: 6px 12px;
-            text-align: center;
+            background-color: rgba($blue, 0.8);
+            // background-color: #025878;
             box-shadow: $box-shadow;
+            color: #fff;
+            text-align: center;
             font-size: 14px;
             transition: $ease;
             @media #{$lt-480} {
                 font-size: 13px;
             }
             i {
-                color: #fff;
                 margin-left: 5px;
+                color: #fff;
             }
             &:hover {
                 background-color: $blue;
@@ -105,8 +135,8 @@ $lt-1200: 'only screen and (max-width: 74.9375em)';;
 }
 
 * {
-    font-family: $open-sans;
     font-weight: 300;
+    font-family: $open-sans;
 }
 
 a {
@@ -136,14 +166,14 @@ h3 {
     font-size: 24px;
     transition: $ease;
     @media #{$lt-768} {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 h4 {
-    font-size: 20px;
+    font-size: 22px;
     transition: $ease;
     @media #{$lt-768} {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 h5 {
@@ -156,25 +186,25 @@ h5 {
 
 nav {
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 60px;
-    line-height: 60px;
     background-color: rgba(0,0,0,0);
-    z-index: 100;
+    line-height: 60px;
     transition: $ease;
     .nav-container {
-        max-width: 1200px;
         margin: 0 auto;
+        max-width: 1200px;
     }
     &.fixed {
         position: fixed;
-        background-color: white;
         border-bottom: 1px solid darken($light-gray,5%);
+        background-color: white;
         .nav-right {
             a {
-                color: $dark-gray;
                 // declare  dummy rule to allow for transition
                 border-bottom: 3px solid rgba(0,0,0,0);
+                color: $dark-gray;
                 transition: $ease;
                 &:hover {
                     color: darken($dark-gray,10%);
@@ -197,9 +227,9 @@ nav {
             display: none;
         }
         a {
-            text-decoration: none;
-            color: $light-gray;
             padding: 17px 8px;
+            color: $light-gray;
+            text-decoration: none;
             transition: $ease;
             &:hover {
                 color: darken($light-gray,10%);
@@ -212,16 +242,16 @@ nav {
 }
 nav.static-nav {
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 60px;
-    line-height: 60px;
-    background-color: #fff;
-    z-index: 100;
-    transition: $ease;
     border-bottom: 1px solid darken($light-gray,5%);
+    background-color: #fff;
+    line-height: 60px;
+    transition: $ease;
     .nav-container {
-        max-width: 1200px;
         margin: 0 auto;
+        max-width: 1200px;
     }
     .nav-left {
         float: left;
@@ -235,9 +265,9 @@ nav.static-nav {
         float: right;
         padding-right: 2%;
         a {
-            text-decoration: none;
-            color: $dark-gray;
             padding: 17px 8px;
+            color: $dark-gray;
+            text-decoration: none;
             &:hover {
                 color: darken($dark-gray,10%);
             }
@@ -246,12 +276,12 @@ nav.static-nav {
 }
 
 .nav-right-hamburger {
+    position: absolute;
+    top: 15px;
+    right: 28px;
+    z-index: 103;
     display: none;
     float: right;
-    z-index: 103;
-    position: absolute;
-    right: 28px;
-    top: 15px;
     transition: all 0.4s ease;
     @media #{$lt-768} {
         display: block;
@@ -264,35 +294,35 @@ nav.static-nav {
     }
     .toggle-1, .toggle-2, .toggle-3 {
         z-index: 103;
-        background-color: $yellow;
+        margin: 6px auto;
         width: 30px;
         height: 3px;
-        margin: 6px auto;
+        background-color: $yellow;
         transition: all 0.4s ease;
     }
     &.on {
         transform: rotate(270deg);
         .toggle-1 {
-            transform: rotate(45deg) translate(7px, 6.5px);
             height: 4px;
+            transform: rotate(45deg) translate(7px, 6.5px);
         }
         .toggle-2 {
             opacity: 0;
         }
         .toggle-3 {
-            transform: rotate(-45deg) translate(7px, -6.5px);
             height: 4px;
+            transform: rotate(-45deg) translate(7px, -6.5px);
         }
     }
 }
 .nav-right-collapse {
-    height: 100%;
-    width: 90px;
-    background-color: rgba($light-gray,0.93);
-    border-left: 1px solid darken($light-gray, 15%);
     position: fixed;
-    right: -95px;
     top: 0;
+    right: -95px;
+    width: 90px;
+    height: 100%;
+    border-left: 1px solid darken($light-gray, 15%);
+    background-color: rgba($light-gray,0.93);
     transition: $ease;
     @media #{$gt-768} {
         display: none;
@@ -303,12 +333,12 @@ nav.static-nav {
         right: 0;
     }
     a {
-        cursor: pointer;
         display: block;
+        padding: 15px 0;
         color: $dark-gray;
         text-align: center;
         font-size: 16px;
-        padding: 15px 0;
+        cursor: pointer;
         @media #{$lt-768} {
             padding: 5px 0;
         }
@@ -336,24 +366,24 @@ nav.static-nav {
     //     margin-left: 10px;
     // }
     img {
-        width: 70px;
-        margin: 0 10px;
         position: absolute;
         bottom: 25px;
+        margin: 0 10px;
+        width: 70px;
     }
 }
 
 
 #main header {
-    background-color: rgb(15, 29, 28);
-    background-image: url("/images/header.jpg");
-    background-size: cover;
-    height: 350px;
-    background-position: 50% 0;
-    text-align: center;
-    color: #fff;
     padding-top: 150px;
     padding-bottom: 150px;
+    height: 350px;
+    background-color: rgb(15, 29, 28);
+    background-image: url("/images/header.jpg");
+    background-position: 50% 0;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
     transition: $ease;
     @media #{$lt-640} {
         height: 275px;
@@ -363,29 +393,29 @@ nav.static-nav {
         opacity: 0;
     }
     h1 {
-        font-weight: 700;
         margin-bottom: 50px;
+        font-weight: 700;
     }
     h2 {
         font-weight: 700;
     }
     h4 {
+        margin-bottom: 20px;
         color: $light-gray;
         font-weight: 300;
-        margin-bottom: 20px;
     }
 
     a.header-btn {
-        cursor: pointer;
-        border: none;
         display: inline-block;
+        margin: 0 5px;
         width: 140px;
         height: 45px;
-        line-height: 45px;
-        margin: 0 5px;
-        font-size: 14px;
+        border: none;
         color: white;
         font-weight: 600;
+        font-size: 14px;
+        line-height: 45px;
+        cursor: pointer;
         transition: $ease;
         @media #{$lt-640} {
             width: 115px;
@@ -393,19 +423,19 @@ nav.static-nav {
         &.facebook-btn, &.subscribe-btn {
             border: 2px solid $yellow;
             &:hover {
-                background-color: darken($yellow,5%);
                 border: 2px solid darken($yellow,5%);
+                background-color: darken($yellow,5%);
             }
             @media #{$lt-640} {
                 font-size: 13px;
             }
         }
         // &.subscribe-btn {
-            // border: 2px solid $yellow;
-            // &:hover {
-                // background-color: darken($yellow,5%);
-                // border: 2px solid darken($yellow,5%);
-            // }
+        // border: 2px solid $yellow;
+        // &:hover {
+        // background-color: darken($yellow,5%);
+        // border: 2px solid darken($yellow,5%);
+        // }
         // }
     }
 
@@ -414,18 +444,18 @@ nav.static-nav {
 section {
     border-bottom: 1px solid darken($light-gray, 5%);
     &:not(:last-of-type):after {
-        display: block;
-        content: "";
-        width: 10px;
-        height: 10px;
-        border:  1px solid darken($light-gray,5%);
         position: relative;
         bottom: -55px;
         left: 50%;
+        display: block;
         margin-left: -5px;
-        background-color: #fff;
+        width: 10px;
+        height: 10px;
+        border:  1px solid darken($light-gray,5%);
         border-radius: 100%;
+        background-color: #fff;
         box-shadow: $light-gray 0 0 0 5px;
+        content: "";
     }
 }
 .container {
@@ -436,8 +466,8 @@ section {
 }
 
 section#about {
-    background-color: #fff;
     padding: 50px 0;
+    background-color: #fff;
     .section-container {
         margin: 0 auto;
         max-width: $container-width;
@@ -457,27 +487,29 @@ section#about {
 }
 
 section#events {
-    background-color: $light-gray;
     padding: 50px 0;
+    background-color: $light-gray;
     .section-container {
         margin: 0 auto;
         max-width: $container-width;
+
+        @include event;
         h1 {
             color: $dark-gray;
-            font-weight: 700;
             text-align: center;
+            font-weight: 700;
         }
-        @include event;
         .events-archive-btn {
             display: block;
             margin: 25px auto 0 auto;
-            height: 45px;
             width: 250px;
+            height: 45px;
             background-color: $yellow;
-            color: #fff;
-            line-height: 45px;
-            text-align: center;
             box-shadow: $box-shadow;
+            color: #fff;
+            text-align: center;
+            line-height: 45px;
+            transition: $ease;
             &:hover {
                 background-color: darken($yellow,5%);
             }
@@ -485,14 +517,14 @@ section#events {
     }
 }
 section#team {
-    background-color: #fff;
     padding: 50px 0;
+    background-color: #fff;
     .section-container {
         margin: 0 auto;
         max-width: $container-width;
         h1 {
-            text-align: center;
             color: $dark-gray;
+            text-align: center;
             font-weight: 700;
         }
         ul {
@@ -500,11 +532,11 @@ section#team {
             text-align: center;
             li {
                 display: inline-block;
-                width: 140px;
                 margin: 20px 10px;
+                width: 140px;
                 @media #{$lt-640} {
-                    width: 105px;
                     margin: 20px 5px;
+                    width: 105px;
                 }
                 h5.team-name {
                     color: $dark-gray;
@@ -539,12 +571,12 @@ section#team {
                         }
                     }
                     .team-overlay {
-                        opacity: 0;
+                        position: absolute;
                         width: 140px;
                         height: 140px;
                         border-radius: 100%;
-                        position: absolute;
                         background-color: rgba(darken($blue,8%),0.85);
+                        opacity: 0;
                         transition: $ease;
                         @media #{$lt-640} {
                             width: 105px;
@@ -553,21 +585,22 @@ section#team {
                         }
                         a {
                             display: block;
+                            display: flex;
+                            flex-direction: column;
                             width: 140px;
                             height: 140px;
                             color: white;
                             font-size: 6px;
                             transition: $ease;
-                            display: flex;
+
                             justify-content: center;
-                            flex-direction: column;
                             @media #{$lt-640} {
                                 width: 105px;
                                 height: 105px;
                             }
                             .linkedin-btn {
-                                font-weight: 700;
                                 color: $yellow;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -589,20 +622,20 @@ section#team {
     }
 }
 section#contact {
-    background-color: $light-gray;
     padding: 50px 0;
+    background-color: $light-gray;
     .section-container {
         margin: 0 auto;
         max-width: $container-width;
         h1 {
-            text-align: center;
             color: $dark-gray;
+            text-align: center;
             font-weight: 700;
         }
         form {
-            width: 60%;
-            max-width: 450px;
             display: inline-block;
+            max-width: 450px;
+            width: 60%;
             @media #{$lt-480} {
                 width: 100%;
             }
@@ -610,11 +643,11 @@ section#contact {
                 display: block;
             }
             input, textarea {
-                border: 1px solid darken($light-gray, 15%);
-                outline: none;
-                width: 98%;
-                max-width: 450px;
                 padding: 5px;
+                max-width: 450px;
+                width: 98%;
+                outline: none;
+                border: 1px solid darken($light-gray, 15%);
                 &:focus {
                     border: 1px solid $yellow;
                     box-shadow: 0 0 2px $yellow;
@@ -629,36 +662,37 @@ section#contact {
                 margin: 15px 0;
             }
             .contact-submit-btn {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
                 height: 45px;
                 outline: none;
-                background-color: lighten($yellow,5%);
                 border: none;
+                background-color: lighten($yellow,5%);
+                box-shadow: $box-shadow;
                 color: #fff;
                 font-weight: 300;
                 font-size: 22px;
-                width: 100%;
-                margin: 0 auto;
-                display: block;
-                box-shadow: $box-shadow;
+                transition: $ease;
                 &:hover {
                     background-color: $yellow;
                 }
             }
         }
         .contact-msg {
-            white-space: nowrap;
-            padding: 32px 0;
-            color: $dark-gray;
-            width: 35%;
-            vertical-align: top;
             float: right;
+            padding: 32px 0;
+            width: 35%;
+            color: $dark-gray;
+            vertical-align: top;
+            white-space: nowrap;
             white-space: normal;
             @media #{$lt-480} {
                 display: block;
                 float: none;
+                padding: 15px 0;
                 width: 100%;
                 text-align: center;
-                padding: 15px 0;
                 text-align: left;
             }
             p {
@@ -666,8 +700,8 @@ section#contact {
                 white-space: normal;
                 a, span.subscribe-btn {
                     color: $yellow;
-                    cursor: pointer;
                     font-weight: 400;
+                    cursor: pointer;
                     &:hover {
                         color: darken($yellow,5%);
                     }
@@ -677,15 +711,17 @@ section#contact {
     }
 }
 section#archives {
-    background-color: $light-gray;
     // background-color: #fff;
     padding: 100px 0;
+    background-color: $light-gray;
     .section-container {
         margin: 0 auto;
         max-width: $container-width;
+
+        @include event;
         h1 {
-            text-align: center;
             color: $dark-gray;
+            text-align: center;
             font-weight: 700;
         }
         p {
@@ -699,18 +735,17 @@ section#archives {
                 cursor: pointer;
             }
         }
-        @include event;
     }
 }
 section#sponsors {
-    background-color: #fff;
     padding: 50px 0;
+    background-color: #fff;
     .section-container {
         margin: 0 auto;
         max-width: $container-width;
         h1 {
-            text-align: center;
             color: $dark-gray;
+            text-align: center;
             font-weight: 700;
         }
     }
@@ -718,26 +753,26 @@ section#sponsors {
 
 .subscribe-overlay {
     position: fixed;
+    z-index: 101;
     display: none;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.7);
-    z-index: 101;
 }
 .subscribe-form {
+    position: fixed;
+    top: 28%;
+    left: calc(50vw - 158px);
+    z-index: 102;
+    display: none;
+    padding: 25px;
     // width: 250px;
     width: auto;
     background-color: $light-gray;
-    left: calc(50vw - 158px);
-    top: 28%;
-    position: fixed;
-    display: none;
-    z-index: 102;
     color: white;
-    padding: 25px;
     h5 {
-        color: $dark-gray;
         margin-bottom: 25px;
+        color: $dark-gray;
         font-weight: 600;
     }
     label {
@@ -746,41 +781,43 @@ section#sponsors {
     }
     input#mce-EMAIL {
         display: block;
-        border: 1px solid $dark-gray;
-        padding: 5px;
-        color: $dark-gray;
-        outline: none;
-        width: 95%;
         margin-bottom: 20px;
+        padding: 5px;
+        width: 95%;
+        outline: none;
+        border: 1px solid $dark-gray;
+        color: $dark-gray;
         &:focus {
             border: 1px solid $yellow;
             box-shadow: 0 0 2px $yellow;
         }
     }
     input.subscribe-submit {
-        outline: none;
-        background-color: $yellow;
-        color: white;
-        margin-top: 15px;
-        border: none;
         display: inline-block;
+        margin-top: 15px;
+        margin-right: 15px;
         width: 115px;
         height: 40px;
+        outline: none;
+        border: none;
+        background-color: $yellow;
         box-shadow: $box-shadow;
-        margin-right: 15px;
+        color: white;
+        transition: $ease;
         &:hover {
             background-color: darken($yellow,5%);
         }
     }
     input.subscribe-close {
-        outline: none;
-        background-color: lighten($dark-gray,5%);
-        color: white;
-        border: none;
+        display: inline-block;
         width: 115px;
         height: 40px;
-        display: inline-block;
+        outline: none;
+        border: none;
+        background-color: lighten($dark-gray,5%);
         box-shadow: $box-shadow;
+        color: white;
+        transition: $ease;
         &:hover {
             background-color: $dark-gray;
         }
@@ -789,27 +826,27 @@ section#sponsors {
 }
 
 footer {
-    background-color: $light-gray;
     padding: 60px 4%;
+    background-color: $light-gray;
     .footer-container {
-        max-width: 800px;
         margin: 0 auto;
+        max-width: 800px;
     }
     .col {
-        width: 32%;
         display: inline-block;
-        vertical-align: top;
+        width: 32%;
         color: white;
+        vertical-align: top;
         h5 {
-            color: $yellow;
-            font-size: 14px;
-            font-weight: 400;
             margin-bottom: 10px;
+            color: $yellow;
+            font-weight: 400;
+            font-size: 14px;
         }
         a, p {
-            font-size: 13px;
             display: block;
             color: $dark-gray;
+            font-size: 13px;
             &.subscribe-btn {
                 cursor: pointer;
             }
@@ -823,8 +860,8 @@ footer {
     .footer-icons {
         margin-top: 40px;
         img {
-            max-height: 35px;
             max-width: 100%;
+            max-height: 35px;
         }
     }
 }

@@ -173,101 +173,101 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx.html": {
+	"\/_officers\/alex-orr.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx.html",
+		"inputAbbreviatedPath": "\/_officers\/alex-orr.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx0.html": {
+	"\/_officers\/eric-lin.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx0.html",
+		"inputAbbreviatedPath": "\/_officers\/eric-lin.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx1.html": {
+	"\/_officers\/henry-xiao.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx1.html",
+		"inputAbbreviatedPath": "\/_officers\/henry-xiao.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx2.html": {
+	"\/_officers\/jacob-davis.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx2.html",
+		"inputAbbreviatedPath": "\/_officers\/jacob-davis.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx3.html": {
+	"\/_officers\/jesse-qin.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx3.html",
+		"inputAbbreviatedPath": "\/_officers\/jesse-qin.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx4.html": {
+	"\/_officers\/mike-shi.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx4.html",
+		"inputAbbreviatedPath": "\/_officers\/mike-shi.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx5.html": {
+	"\/_officers\/raghav-mehta.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx5.html",
+		"inputAbbreviatedPath": "\/_officers\/raghav-mehta.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx6.html": {
+	"\/_officers\/rahul-sabnis.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx6.html",
+		"inputAbbreviatedPath": "\/_officers\/rahul-sabnis.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx7.html": {
+	"\/_officers\/ryan-hill.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx7.html",
+		"inputAbbreviatedPath": "\/_officers\/ryan-hill.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx8.html": {
+	"\/_officers\/sean-mcentee.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx8.html",
+		"inputAbbreviatedPath": "\/_officers\/sean-mcentee.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_officers\/hx9.html": {
+	"\/_officers\/zane-rice.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_officers\/hx9.html",
+		"inputAbbreviatedPath": "\/_officers\/zane-rice.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -444,6 +444,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_site\/images\/event-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.22616e+06,
+		"inputAbbreviatedPath": "\/_site\/images\/event-placeholder.jpg",
+		"outputAbbreviatedPath": "\/_site\/images\/event-placeholder.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/images\/ex-wide.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108562,
+		"inputAbbreviatedPath": "\/_site\/images\/ex-wide.png",
+		"outputAbbreviatedPath": "\/_site\/images\/ex-wide.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_site\/images\/first-post.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -594,6 +616,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_site\/README.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/README.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/archives\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -641,6 +672,28 @@
 		"initialSize": 72030,
 		"inputAbbreviatedPath": "\/images\/cses-logo-4000.png",
 		"outputAbbreviatedPath": "\/images\/cses-logo-4000.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/event-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.22616e+06,
+		"inputAbbreviatedPath": "\/images\/event-placeholder.jpg",
+		"outputAbbreviatedPath": "\/images\/event-placeholder.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ex-wide.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108562,
+		"inputAbbreviatedPath": "\/images\/ex-wide.png",
+		"outputAbbreviatedPath": "\/images\/ex-wide.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

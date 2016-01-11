@@ -1,6 +1,11 @@
 <div class="event">
-
-    <h3 class="event-name">{{event.title}}</h3>
+    {% if event.image %}
+    <div class="event-img-container">
+        <div class="event-img-overlay" style="background-image: url({{event.image}});"><h4>{{event.title}}</h4></div>
+    </div>
+    {% else %}
+    <h4 class="event-name">{{event.title}}</h4>
+    {% endif %}
 
     <p class="event-date inline"><i class="fa fa-calendar-o"></i> {{event.date-begin | date: "%A, %b %e"}}
         {% if eventDateEnd > eventDateBegin %}

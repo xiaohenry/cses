@@ -16,9 +16,51 @@ layout: default
     <section id="about">
         <div class="section-container container">
             <h1>Our Goal</h1>
+            <!-- <h1 class="ribbon">
+                <span class="ribbon-content">Our Goal</span>
+            </h1> -->
             <p>At CSES, we aim to form a passionate community of computer scientists and engineers at UC San Diego. From tech talks, to social events, to outreach, we have a diverse set of events and activities that appeal to any computer scientist or engineer.</p>
-            <img src="/images/macbook.jpg" alt="Macbook Icon" />
+            <!-- <img src="/images/macbook.jpg" alt="Macbook Icon" /> -->
+
         </div>
+
+        <div class="pillar-container">
+
+        <div class="pillar">
+            <div class="pillar-icon"><img src="/images/innovate.svg" alt="Pillar Icon"/></div>
+            <!-- <h5>Innovate</h5> -->
+            <div class="triangle"></div>
+            <h4>Innovate</h4>
+        </div>
+
+        <div class="pillar">
+            <div class="pillar-icon"><img src="/images/build.svg" alt="Pillar Icon"/></div>
+            <!-- <h5>Build</h5> -->
+            <div class="triangle"></div>
+            <h4>Build</h4>
+        </div>
+
+        <div class="pillar">
+            <div class="pillar-icon"><img src="/images/connect.svg" alt="Pillar Icon"/></div>
+            <!-- <h5>Connect</h5> -->
+            <div class="triangle"></div>
+            <h4>Connect</h4>
+        </div>
+
+        <!-- <div class="pillar left">
+            <div class="pillar-icon"></div>
+            <div class="triangle"></div>
+        </div>
+        <div class="pillar right">
+            <div class="triangle"></div>
+            <div class="pillar-icon"></div>
+        </div>
+        <div class="pillar left">
+            <div class="pillar-icon"></div>
+            <div class="triangle"></div>
+        </div> -->
+
+    </div>
     </section>
 
 
@@ -31,7 +73,7 @@ layout: default
             {% assign curDate = (site.time | date: '%s') %}
             {% assign eventDateBegin = (event.date-begin | date: '%s') %}
             {% assign eventDateEnd = (event.date-end | date: '%s') %}
-            {% if eventDateEnd >= curDate + 86400 %}
+            {% if eventDateEnd >= curDate + 86400 and event.hide != true %}
 
             <!-- keep track of events that are AT MOST 1 day old -->
             {% include event.html %}
@@ -47,7 +89,8 @@ layout: default
         <div class="section-container container">
             <h1>Team</h1>
             <ul>
-                {% for officer in site.officers %}
+                {% assign sortedOfficers = (site.officers | sort: 'order') %}
+                {% for officer in sortedOfficers %}
                 <li>
                     <div class="team-img-container">
                         {% if officer.linkedin %}
@@ -58,6 +101,8 @@ layout: default
                         <img src="{{officer.img}}" alt="CSES Team Member"/>
                         {% if officer.linkedin %}
                         <a href="{{officer.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        {% else %}
+                        <div class="no-linkedin-filler">s</div>
                         {% endif %}
                     </div>
                     <h5 class="team-name">{{officer.name}}</h5>
@@ -111,7 +156,18 @@ layout: default
     <section id="sponsors">
         <div class="section-container container">
             <h1>Sponsors</h1>
-
+            <p>Here are some of the sponsors that help make our events possible. Thank you!</p>
+            <div class="sponsor-container">
+            <img class="sponsor" src="/images/sponsors/workday.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/visa.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/northrop.jpg" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/google.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/facebook.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/viasat.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/qualcomm.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/microsoft.png" alt="Sponsor Logo" />
+            <img class="sponsor" src="/images/sponsors/iboss.png" alt="Sponsor Logo" />
+        </div>
         </div>
     </section>
 </div>

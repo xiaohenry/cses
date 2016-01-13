@@ -11,7 +11,9 @@ layout: static
         {% assign curDate = (site.time | date: '%s') %}
         {% assign eventDateBegin = (event.date-begin | date: '%s') %}
         {% assign eventDateEnd = (event.date-end | date: '%s') %}
+        {% if event.hide != true %}
         {% include event.html %}
+        {% endif %}
         {% endfor %}
     </div>
 

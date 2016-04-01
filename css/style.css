@@ -462,7 +462,7 @@ nav.static-nav {
     float: left;
     padding-left: 2%; }
     nav.static-nav .nav-left img {
-      max-height: 40px;
+      max-height: 35px;
       vertical-align: middle; }
   nav.static-nav .nav-right {
     float: right;
